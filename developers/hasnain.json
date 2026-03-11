@@ -1,10 +1,9 @@
 {
-    "name": "Ada Lovelace1",
+    "name": "Hasnain Babar",
     "role": "Software Engineer",
     "avatar": "/hasnain.png",
-    "github": "https://github.com/example",
-    "linkedin": "https://linkedin.com/in/example",
-    "portfolio": "https://example.com",
-    "skills": ["TypeScript", "React", "Node.js", "Docker"],
-    "country": "United Kingdom"
+    "github": "https://github.com/hasnainskhan",
+    "linkedin": "https://www.linkedin.com/in/hasnain-babar-2b9b26306",
+    "portfolio": "https://hasnaindev-seven.vercel.app/",
+    "country": "Pakistan"
   }

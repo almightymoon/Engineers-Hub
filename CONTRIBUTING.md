@@ -12,10 +12,10 @@ Thanks for contributing! The main way to help is to add your developer profile.
 {
   "name": "Your Name",
   "role": "Full Stack Developer",
+  "avatar": "/your-photo.png",
   "github": "https://github.com/yourusername",
   "linkedin": "https://linkedin.com/in/yourprofile",
   "portfolio": "https://yourwebsite.com",
-  "skills": ["JavaScript", "React", "Node.js", "Docker"],
   "country": "Your Country"
 }
 ```
@@ -26,7 +26,6 @@ Thanks for contributing! The main way to help is to add your developer profile.
 - Do **not** modify other developer profiles.
 - Keep JSON valid and formatted.
 - Ensure links are valid URLs.
-- Keep `skills` to a reasonable list (recommended: 4–12).
 
 ## Local verification
 

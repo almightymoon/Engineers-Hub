@@ -44,13 +44,15 @@ Example profile format:
 {
   "name": "Your Name",
   "role": "Full Stack Developer",
+  "avatar": "/your-photo.png",
   "github": "https://github.com/yourusername",
   "linkedin": "https://linkedin.com/in/yourprofile",
   "portfolio": "https://yourwebsite.com",
-  "skills": ["JavaScript", "React", "Node.js", "Docker"],
   "country": "Your Country"
 }
 ```
+
+Put your photo in the `public/` folder and set `avatar` to its path (e.g. `"/your-photo.png"`). If you omit `avatar`, your initials will be shown instead.
 
 ## Contribution guidelines
 

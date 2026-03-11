@@ -5,7 +5,6 @@ export type DeveloperProfile = {
   github?: string
   linkedin?: string
   portfolio?: string
-  skills: string[]
   country: string
 }
 
@@ -26,21 +25,15 @@ function asOptionalUrl(value: unknown): string | undefined {
   if (!str) return undefined
   // Accept path-only values (e.g. "/hasnain.png" from public folder)
   if (str.startsWith('/') || str.startsWith('./')) return str
+  // Prepend https:// if no protocol (e.g. "www.linkedin.com/in/..." -> "https://www.linkedin.com/in/...")
+  const withProtocol = /^https?:\/\//i.test(str) ? str : `https://${str}`
   try {
     // eslint-disable-next-line no-new
-    new URL(str)
-    return str
+    new URL(withProtocol)
+    return withProtocol
   } catch {
     return undefined
   }
-}
-
-function asStringArray(value: unknown): string[] | null {
-  if (!Array.isArray(value)) return null
-  const cleaned = value
-    .map((v) => (typeof v === 'string' ? v.trim() : ''))
-    .filter((v) => v.length > 0)
-  return cleaned.length > 0 ? cleaned : []
 }
 
 function parseDeveloperProfile(raw: unknown, source: string): ParseResult {
@@ -49,12 +42,10 @@ function parseDeveloperProfile(raw: unknown, source: string): ParseResult {
   const name = asNonEmptyString(raw.name)
   const role = asNonEmptyString(raw.role)
   const country = asNonEmptyString(raw.country)
-  const skills = asStringArray(raw.skills)
 
   if (!name) return { ok: false, error: `${source}: missing/invalid "name"` }
   if (!role) return { ok: false, error: `${source}: missing/invalid "role"` }
   if (!country) return { ok: false, error: `${source}: missing/invalid "country"` }
-  if (skills === null) return { ok: false, error: `${source}: "skills" must be an array` }
 
   return {
     ok: true,
@@ -62,7 +53,6 @@ function parseDeveloperProfile(raw: unknown, source: string): ParseResult {
       name,
       role,
       country,
-      skills,
       avatar: asOptionalUrl(raw.avatar),
       github: asOptionalUrl(raw.github),
       linkedin: asOptionalUrl(raw.linkedin),

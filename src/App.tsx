@@ -92,7 +92,6 @@ function App() {
         p.name,
         p.role,
         p.country,
-        ...p.skills,
         p.github ?? '',
         p.linkedin ?? '',
         p.portfolio ?? '',
@@ -109,7 +108,7 @@ function App() {
         <div>
           <h1>Engineers Hub</h1>
           <p className="subtitle">
-            A global, open-source directory of developers and tech creators.
+            A global directory of {allProfiles.length}+ Engineer{allProfiles.length === 1 ? '' : 's'}
           </p>
         </div>
 
