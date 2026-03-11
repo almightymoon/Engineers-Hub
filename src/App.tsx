@@ -108,7 +108,7 @@ function App() {
         <div>
           <h1>Engineers Hub</h1>
           <p className="subtitle">
-            A global directory of {allProfiles.length}+ Engineer{allProfiles.length === 1 ? '' : 's'}
+            A global directory of {allProfiles.length}+ Engineers
           </p>
         </div>
 

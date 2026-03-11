@@ -1,6 +1,6 @@
 # Engineers Hub
 
-**Engineers Hub** is an open-source community project where developers from around the world can contribute and showcase their profiles.
+**Engineers Hub** is an open-source community project where developers, IT Professionals, AI Engineers, Cyber Security Experts, Data Scientists, DevOps Engineers, and Cloud Engineers from around the world can contribute and showcase their profiles.
 
 The goal is to build a global directory of developers where engineers, programmers, DevOps specialists, designers, and tech enthusiasts can collaborate and be part of an open-source community.
 
@@ -35,7 +35,7 @@ npm run build
 1. Fork the repository
 2. Clone your fork
 3. Add your profile in `developers/` as `developers/yourname.json`
-4. Commit and push
+4. Commit and push with message: `yourname.json profile added`
 5. Open a pull request
 
 Example profile format:
